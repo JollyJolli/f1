@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronómetro de Carrera y Calculadora</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS externo -->
+    <script src="https://kit.fontawesome.com/7f25aa038c.js" crossorigin="anonymous"></script> <!-- Enlace al kit de Font Awesome -->
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <h1><i class="fas fa-stopwatch"></i> Cronómetro de Carrera</h1>
+            <input type="text" id="lapTimeInput" placeholder="Tiempo de vuelta (minutos segundos)">
+            <input type="number" id="lapsRemainingInput" placeholder="Vueltas restantes">
+            <button onclick="addLap()"><i class="fas fa-plus-circle"></i> Registrar Vuelta</button>
+            <div class="result">
+                <div class="card" id="lapList"></div>
+                <div class="card" id="lapsRemaining"></div>
+                <div class="card" id="totalTimeRemaining"></div>
+            </div>
+        </div>
+        <div class="column">
+            <h1><i class="fas fa-calculator"></i> Calculadora</h1>
+            <div class="calculator">
+                <input type="number" id="num1" placeholder="Número 1">
+                <input type="number" id="num2" placeholder="Número 2">
+                <button onclick="subtract()"><i class="fas fa-minus-circle"></i> Restar</button>
+                <div class="card" id="result"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Enlace al archivo JavaScript externo -->
+</body>
+</html>
